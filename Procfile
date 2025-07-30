@@ -1,1 +1,1 @@
-web: gunicorn talkr-portal.wsgi
+web: gunicorn talkrportal.wsgi
