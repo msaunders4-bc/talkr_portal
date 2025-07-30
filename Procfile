@@ -1,1 +1,1 @@
-web: cd talkr_portal && gunicorn config.wsgi:application
+web: gunicorn config.wsgi
