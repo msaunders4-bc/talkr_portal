@@ -1,0 +1,12 @@
+<h2>{{ employee.name }}</h2>
+<p><strong>Employee ID:</strong> {{ employee.employee_id }}</p>
+<p><strong>Email:</strong> {{ employee.email }}</p>
+<p><strong>Client:</strong> {{ employee.client.name }}</p>
+<p><strong>Account Number:</strong> {{ employee.acc_number }}</p>
+<p><strong>EMBG:</strong> {{ employee.embg }}</p>
+<p><strong>MK ID:</strong> {{ employee.mk_id }}</p>
+<p><strong>Start Date:</strong> {{ employee.start_date }}</p>
+<p><strong>Net Salary:</strong> ${{ employee.net_salary }}</p>
+
+<a href="{% url 'employee_update' employee.pk %}">Edit</a> |
+<a href="{% url 'employee_delete' employee.pk %}">Delete</a>
