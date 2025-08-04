@@ -8,5 +8,4 @@
 <p><strong>Start Date:</strong> {{ employee.start_date }}</p>
 <p><strong>Net Salary:</strong> ${{ employee.net_salary }}</p>
 
-<a href="{% url 'employee_update' employee.pk %}">Edit</a> |
-<a href="{% url 'employee_delete' employee.pk %}">Delete</a>
+<a href="{% url 'portal:employee_detail' employee.pk %}">View Employee</a>

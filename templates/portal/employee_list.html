@@ -1,10 +1,10 @@
-{% block title %}Employee List{% endblock %}
-
-{% block content %}
+{% block title %}Employee List{% endblock %} {% block content %}
 <div class="container">
     <h1>Employee List</h1>
-    <a href="{% url 'portal:employee_create' %}" class="btn btn-primary">Add New Employee</a>
-    
+    <a href="{% url 'portal:employee_create' %}" class="btn btn-primary"
+        >Add New Employee</a
+    >
+
     <table class="table">
         <thead>
             <tr>
@@ -23,9 +23,17 @@
                 <td>{{ employee.email }}</td>
                 <td>{{ employee.client|default:"No Client" }}</td>
                 <td>
-                    <a href="{% url 'portal:employee_detail' employee.pk %}">View</a> |
-                    <a href="{% url 'portal:employee_update' employee.pk %}">Edit</a> |
-                    <a href="{% url 'portal:employee_delete' employee.pk %}">Delete</a>
+                    <a href="{% url 'portal:employee_detail' employee.pk %}"
+                        >View</a
+                    >
+                    |
+                    <a href="{% url 'portal:employee_update' employee.pk %}"
+                        >Edit</a
+                    >
+                    |
+                    <a href="{% url 'portal:employee_delete' employee.pk %}"
+                        >Delete</a
+                    >
                 </td>
             </tr>
             {% empty %}
