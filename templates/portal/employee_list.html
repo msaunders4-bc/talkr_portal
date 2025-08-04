@@ -3,49 +3,51 @@
 {% block content %}
 
 <div class="container">
-    <h1>Employee List</h1>
-    <a href="{% url 'portal:employee_create' %}" class="btn btn-primary"
-        >Add New Employee</a>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <span class="user-greeting">Hello, {{ user.username }}</span>
+            <a href="{% url 'login:logout' %}" class="btn btn-logout">Logout</a>
+        </div>
+    </nav>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Employee ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Client</th>
-                <th>Start Date</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for employee in employees %}
-            <tr>
-                <td>{{ employee.employee_id }}</td>
-                <td>{{ employee.name }}</td>
-                <td>{{ employee.email }}</td>
-                <td>{{ employee.client|default:"No Client" }}</td>
-                <td>{{ employee.start_date }}</td>
-                <td>
-                    <a href="{% url 'portal:employee_detail' employee.pk %}"
-                        >View</a
-                    >
-                    |
-                    <a href="{% url 'portal:employee_update' employee.pk %}"
-                        >Edit</a
-                    >
-                    |
-                    <a href="{% url 'portal:employee_delete' employee.pk %}"
-                        >Delete</a
-                    >
-                </td>
-            </tr>
-            {% empty %}
-            <tr>
-                <td colspan="5">No employees found.</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    <div class="main-content">
+        <h2>Employee List</h2>
+        <a href="{% url 'portal:employee_create' %}" class="btn btn-primary">Add New Employee</a>
+
+        <table class="table">
+            <!-- Your existing table code -->
+            <thead>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Client</th>
+                    <th>Start Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for employee in employees %}
+                <tr>
+                    <td>{{ employee.employee_id }}</td>
+                    <td>{{ employee.name }}</td>
+                    <td>{{ employee.email }}</td>
+                    <td>{{ employee.client|default:"No Client" }}</td>
+                    <td>{{ employee.start_date }}</td>
+                    <td>
+                        <a href="{% url 'portal:employee_detail' employee.pk %}">View</a> |
+                        <a href="{% url 'portal:employee_update' employee.pk %}">Edit</a> |
+                        <a href="{% url 'portal:employee_delete' employee.pk %}">Delete</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="6">No employees found.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 </div>
 {% endblock %}

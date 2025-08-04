@@ -25,7 +25,7 @@ def login_view(request):
         else:
             messages.error(request, 'Please enter both username and password.')
     
-    return render(request, 'login.html')
+    return render(request, 'login/login.html')
 
 
 @login_required
@@ -33,4 +33,4 @@ def logout_view(request):
     """Handle user logout"""
     logout(request)
     messages.success(request, 'You have been logged out successfully.')
-    return redirect('login')
+    return redirect('login:login')
