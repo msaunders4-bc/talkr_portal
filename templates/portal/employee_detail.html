@@ -1,7 +1,7 @@
 <h2>{{ employee.name }}</h2>
 <p><strong>Employee ID:</strong> {{ employee.employee_id }}</p>
 <p><strong>Email:</strong> {{ employee.email }}</p>
-<p><strong>Client:</strong> {{ employee.client.name }}</p>
+<p><strong>Client:</strong> {{ employee.client.name|default:"No Client Assigned" }}</p>
 <p><strong>Account Number:</strong> {{ employee.acc_number }}</p>
 <p><strong>EMBG:</strong> {{ employee.embg }}</p>
 <p><strong>MK ID:</strong> {{ employee.mk_id }}</p>
