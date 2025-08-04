@@ -34,7 +34,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
@@ -138,6 +138,22 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
+# Date input formats
+DATE_INPUT_FORMATS = [
+    '%Y-%m-%d',        # '2025-01-31'
+    '%m/%d/%Y',        # '01/31/2025'
+    '%m/%d/%y',        # '01/31/25'
+    '%b %d %Y',        # 'Jan 31 2025'
+    '%b %d, %Y',       # 'Jan 31, 2025'
+    '%d %b %Y',        # '31 Jan 2025'
+    '%d %b, %Y',       # '31 Jan, 2025'
+    '%B %d %Y',        # 'January 31 2025'
+    '%B %d, %Y',       # 'January 31, 2025'
+    '%d %B %Y',        # '31 January 2025'
+    '%d %B, %Y',       # '31 January, 2025'
+]
+
+USE_L10N = True
 USE_TZ = True
 
 
