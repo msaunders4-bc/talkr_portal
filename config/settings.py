@@ -84,10 +84,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'config.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+# DATABASES
 
-# Database configuration
 DATABASE_URL = os.environ.get("DATABASE_URL")
 
 if DATABASE_URL:
