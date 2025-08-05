@@ -11,9 +11,9 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
 import os
 import sys
-import dj_database_url
 if os.path.isfile('env.py'):
     import env
 
@@ -87,27 +87,24 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# Database configuration
 DATABASE_URL = os.environ.get("DATABASE_URL")
 
 if DATABASE_URL:
-    # Production database (Heroku)
+    # Production database (Heroku PostgreSQL)
     DATABASES = {
-        'default': dj_database_url.parse(DATABASE_URL)
+        'default': {
+            **dj_database_url.parse(DATABASE_URL),
+            'CONN_MAX_AGE': 600
+        }
     }
 else:
-    # Development database (local SQLite)
+    # Development database (Local SQLite)
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': BASE_DIR / 'db.sqlite3',
         }
-    }
-
-# Test database override
-if 'test' in sys.argv:
-    DATABASES['default'] = {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': ':memory:'
     }
 
 CSRF_TRUSTED_ORIGINS = [
