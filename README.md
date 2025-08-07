@@ -1,6 +1,6 @@
 # Talkr Portal
 
-![Responsive design preview](static\images\amIResponsive.png)
+![Responsive design preview](static/images/amIResponsive.png)
 
 ## UX Design Process
 
