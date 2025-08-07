@@ -1,6 +1,6 @@
 # Talkr Portal
 
-![Responsive design preview](./images/amIresponsive.png)
+![Responsive design preview](static\images\amIResponsive.png)
 
 ## UX Design Process
 
@@ -8,8 +8,8 @@
 
 Below are the wireframes representing the initial design concepts for the Talkr Login and Portal interface:
 
-1. ![Wireframe 1](./images/wireframe1.png)
-2. ![Wireframe 2](./images/wireframe2.png)
+1. ![Wireframe 1](static/images/wireframe1.png)
+2. ![Wireframe 2](static/images/wireframe2.png)
 
 ---
 
@@ -50,7 +50,7 @@ Sans-serif fonts were selected for a modern and clean appearance. A consistent f
 
 ## Entity Relationship Diagram
 
-![ERD](./images/client_employee_erd.png)
+![ERD](static/images/client_employee_erd.png)
 
 - Clear one-to-many relationship between client and employees.
 - Clear one-to-one relationship between employee and client.
@@ -83,11 +83,11 @@ AI was used throughout the build of this portal - utilising co-pilot for help wi
 
 #### Mobile
 
-- ![Lighthouse Mobile](./images/lighthouse-mobile.png)
+- ![Lighthouse Mobile](static/images/lighthouse-mobile.png)
 
 #### Desktop
 
-- ![Lighthouse Desktop](./images/lighthouse-desktop.png)
+- ![Lighthouse Desktop](static/images/lighthouse-desktop.png)
 
 ### Testing Summary
 
