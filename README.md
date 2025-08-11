@@ -83,15 +83,15 @@ AI was used throughout the build of this portal - utilising co-pilot for help wi
 
 #### Mobile
 
-- ![Lighthouse Mobile](static/images/lighthouse-mobile.png)
+![Lighthouse Mobile](static/images/lighthouse-mobile.png)
 
 #### Desktop
 
-- ![Lighthouse Desktop](static/images/lighthouse-desktop.png)
+![Lighthouse Desktop](static/images/lighthouse-desktop.png)
 
 ### Testing Summary
 
-- Manual Testing: Tested cresting a number of users, employees and clients. This involved both via the portal and Django admin. In addition to this, Google Developer tools were used too observe the design on different device to ensure responsiveness.
+- Manual Testing: Tested cresting a number of users, employees and clients. This involved both via the portal and Django admin. In addition to this, Google Developer tools were used to observe the design on different devices to ensure responsiveness.
 
 ---
 
