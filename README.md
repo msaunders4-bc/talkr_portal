@@ -91,12 +91,23 @@ AI was used throughout the build of this portal - utilising co-pilot for help wi
 
 ### Testing Summary
 
-- Manual Testing: Tested cresting a number of users, employees and clients. This involved both via the portal and Django admin. In addition to this, Google Developer tools were used to observe the design on different devices to ensure responsiveness.
+## Manual Testing Summary
+
+| Test Case ID | Test Area                  | Description | Steps | Expected Result | Actual Result | Status |
+|--------------|----------------------------|-------------|-------|-----------------|---------------|--------|
+| TC-001       | Login Functionality         | Verify user login with valid and invalid credentials | 1. Open login page<br>2. Enter valid credentials<br>3. Submit form<br>4. Repeat with invalid credentials | Successful login for valid credentials; error message for invalid credentials | Behaviour matched expectations; no errors found | ✅ Pass |
+| TC-002       | Logout Functionality        | Verify logout terminates session and redirects to login page | 1. Login to portal<br>2. Click logout button in navbar<br>3. Observe redirection | User is logged out and redirected to login page | Behaviour matched expectations; session cleared | ✅ Pass |
+| TC-003       | User Management (Admin)     | Test creating, editing, deleting users via Django admin | 1. Open Django admin<br>2. Create new user<br>3. Edit details<br>4. Delete user | CRUD operations work and changes persist | All actions successful; data reflected correctly in database | ✅ Pass |
+| TC-004       | Employee & Client CRUD      | Test creating, editing, deleting employees & clients via portal | 1. Open portal<br>2. Add new employee/client<br>3. Edit record<br>4. Delete record | CRUD operations function as intended | All tests passed; data updated correctly | ✅ Pass |
+| TC-005       | Form Validation             | Ensure invalid or incomplete submissions are blocked | 1. Leave required fields empty<br>2. Enter invalid data<br>3. Submit form | Validation errors displayed; form not submitted | Validation worked as expected | ✅ Pass |
+| TC-006       | Responsive Design           | Verify layout adapts to different devices | 1. Open portal in Chrome DevTools<br>2. Test various screen sizes<br>3. Check table and navbar behavior | Content adapts; tables scroll on small screens; navigation remains accessible | Responsive design works correctly | ✅ Pass |
+| TC-007       | Navigation Links            | Verify that all navigation links work | 1. Click each navbar link<br>2. Confirm page loads without error | All pages load correctly | No broken links found | ✅ Pass |
+
 
 ---
 
 ## Future Iterations
 
-Planned improvements include filtering the employee list page, 2FA for login, allowing documents to be saved within employee profile page and a notes section.
+Planned iterations include reset password user journey, filtering the employee list page, 2FA for login, allowing documents to be saved within employee profile page and a notes section.
 
 ---
