@@ -2,7 +2,12 @@
 
 ![Responsive design preview](static/images/amIResponsive.png)
 
+### A portal to securely manage employee records and client information for Talkr, an outsourcing company.
+
 ## UX Design Process
+
+### User Stories
+https://github.com/users/msaunders4-bc/projects/5/views/2
 
 ### Wireframes
 
@@ -29,7 +34,6 @@ Sans-serif fonts were selected for a modern and clean appearance. A consistent f
 
 #### Accessibility
 
-- All interactive elements have a minimum target size of 44x44px.
 - Colors meet WCAG AA contrast requirements.
 - Semantic HTML elements are used for screen reader compatibility.
 - ARIA labels are included where necessary.
@@ -57,6 +61,17 @@ Sans-serif fonts were selected for a modern and clean appearance. A consistent f
 - Keys and constraints defined for data integrity.
 
 ---
+
+## Agile Methodology
+
+This project was developed following **Agile principles**, focusing on iterative development, continuous feedback, and adaptability to change.  
+
+Key Agile practices applied include:  
+
+- **Incremental Delivery** – Features were developed and delivered in small, manageable increments.  
+- **Frequent Testing** – Manual and responsive testing were performed throughout the development cycle to ensure quality.  
+- **Continuous Feedback** – Regular reviews and feedback loops were used to refine features and improve user experience.  
+
 
 ## Deployment
 
