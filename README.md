@@ -79,12 +79,36 @@ The Talkr Portal is deployed using Heroku. Continuous deployment is enabled thro
 
 🔗 [https://talkrportal-6cf86883a4fe.herokuapp.com/portal/](https://talkrportal-6cf86883a4fe.herokuapp.com/portal/)
 
+
+**Deployment Overview:**
+
+- The project is configured for production using **Gunicorn** as the web server and **Whitenoise** for static file handling.
+- A `Procfile` and `requirements.txt` are included, and production settings are applied in `settings.py`.
+- The app is version-controlled with Git and pushed to Heroku for deployment.
+- Environment variables such as `SECRET_KEY` and database configuration are set on Heroku.
+- Database migrations are run and static files are collected automatically during deployment.
+
+Once deployed, the application is accessible via the Heroku URL provided.
+
 ---
 
 ## AI Implementation and Orchestration
 
 AI was used throughout the build of this portal - utilising co-pilot for help with the code. ChatGpt for help with the user stories and README.
 
+Key areas include:
+
+### 1. Code Generation
+AI was used to assist in generating boilerplate code, implementing complex functions, and suggesting best practices. This helped accelerate development and reduce manual effort while maintaining code quality.
+
+### 2. Bug Identification & Resolution
+AI contributed to debugging by analysing error messages, suggesting potential fixes, and identifying edge cases. This facilitated faster resolution of issues and improved overall stability.
+
+### 3. Performance & UX Improvements
+AI insights guided optimisations in both backend performance and user experience. Recommendations included refactoring inefficient code, optimising database queries, and improving response times, leading to a smoother, more responsive application.
+
+### 4. Workflow Influence
+AI shaped the development workflow by offering structured guidance, suggesting testing approaches, and providing code review-like feedback. This allowed for more efficient iteration and better prioritisation of tasks.
 ---
 
 ## Testing and Checking
