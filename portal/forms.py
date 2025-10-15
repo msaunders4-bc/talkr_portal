@@ -20,7 +20,8 @@ class EmployeeForm(forms.ModelForm):
             'net_salary': forms.NumberInput(
                 attrs={
                     'step': '0.01',
-                    'class': 'form-control'
+                    'class': 'form-control',
+                    'min': '0'
                 }
             ),
         }
@@ -34,3 +35,9 @@ class EmployeeForm(forms.ModelForm):
             # Add CSS classes to all fields
             if 'class' not in field.widget.attrs:
                 field.widget.attrs['class'] = 'form-control'
+
+    def clean_net_salary(self):
+        net_salary = self.cleaned_data.get('net_salary')
+        if net_salary is not None and net_salary < 0:
+            raise forms.ValidationError("Net salary must be a positive number.")
+        return net_salary
