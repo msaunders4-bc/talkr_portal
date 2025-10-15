@@ -109,6 +109,7 @@ AI insights guided optimisations in both backend performance and user experience
 
 ### 4. Workflow Influence
 AI shaped the development workflow by offering structured guidance, suggesting testing approaches, and providing code review-like feedback. This allowed for more efficient iteration and better prioritisation of tasks.
+
 ---
 
 ## Testing and Checking
