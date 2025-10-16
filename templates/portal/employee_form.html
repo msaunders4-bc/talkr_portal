@@ -30,8 +30,7 @@
             <div
                 class="container-fluid d-flex justify-content-between align-items-center"
             >
-                <span class="navbar-text text-light fs-5 fw-semibold">
-                </span>
+                <span class="navbar-text text-light fs-5 fw-semibold"> </span>
             </div>
         </nav>
         <div class="container-fluid text-left my-4">
@@ -39,13 +38,19 @@
                 {% if form.instance.pk %}Edit{% else %}Create{% endif %}
                 Employee
             </h2>
-            <form method="post">
-              <div class ="w-25">
-                {% csrf_token %} {{ form.as_p }}
-                <button class ="form-button" type="submit">Save</button>
-                <a href="{% url 'portal:employee_list' %}" class="form-button cancel-button">Cancel</a>
-              </div>
-            </form>
+            <div class="form-outer">
+                <form method="post">
+                    <div class="form-btn-group">
+                        {% csrf_token %} {{ form.as_p }}
+                        <button class="form-button" type="submit">Save</button>
+                        <a
+                            href="{% url 'portal:employee_list' %}"
+                            class="form-button cancel-button"
+                            >Cancel</a
+                        >
+                    </div>
+                </form>
+            </div>
         </div>
     </body>
 </html>

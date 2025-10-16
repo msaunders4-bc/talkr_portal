@@ -94,6 +94,14 @@ body {
     transition: background-color 0.3s ease;
 }
 
+.form-btn-group {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
 .cancel-button {
     background-color: #6c757d;
     margin-left: 10px;
