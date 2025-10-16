@@ -66,19 +66,16 @@
                                 <div class="d-flex gap-2 flex-wrap">
                                     <a
                                         href="{% url 'portal:employee_detail' employee.pk %}"
-                                        class="btn btn-outline-info btn-sm"
-                                        >View</a
-                                    >
+                                        class="btn btn-outline-info btn-sm action-btn"
+                                    >View</a>
                                     <a
                                         href="{% url 'portal:employee_update' employee.pk %}"
-                                        class="btn btn-outline-secondary btn-sm"
-                                        >Edit</a
-                                    >
+                                        class="btn btn-outline-secondary btn-sm action-btn"
+                                    >Edit</a>
                                     <a
                                         href="{% url 'portal:employee_delete' employee.pk %}"
-                                        class="btn btn-outline-danger btn-sm"
-                                        >Delete</a
-                                    >
+                                        class="btn btn-outline-danger btn-sm action-btn"
+                                    >Delete</a>
                                 </div>
                             </td>
                         </tr>

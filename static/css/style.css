@@ -135,3 +135,19 @@ body {
 .forgot-password a:hover {
     text-decoration: underline;
 }
+
+.action-btn {
+    min-width: 80px;
+    max-width: 90px;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    margin-bottom: 4px;
+}
+
+@media (min-width: 576px) {
+    .action-btn {
+        width: 100px;
+        margin-bottom: 0;
+    }
+}
