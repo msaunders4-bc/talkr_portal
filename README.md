@@ -82,11 +82,26 @@ The Talkr Portal is deployed using Heroku. Continuous deployment is enabled thro
 
 **Deployment Overview:**
 
-- The project is configured for production using **Gunicorn** as the web server and **Whitenoise** for static file handling.
-- A `Procfile` and `requirements.txt` are included, and production settings are applied in `settings.py`.
-- The app is version-controlled with Git and pushed to Heroku for deployment.
-- Environment variables such as `SECRET_KEY` and database configuration are set on Heroku.
-- Database migrations are run and static files are collected automatically during deployment.
+1. Project was completed using **Visual Studio Code**.  
+2. Open the **VS Code integrated terminal** and activate the Python virtual environment.  
+3. Install required production packages: `gunicorn`, `psycopg2-binary`, `whitenoise`, and `dj-database-url`.  
+4. Generate `requirements.txt` using `pip freeze > requirements.txt`.  
+5. Create a `Procfile` specifying the Gunicorn WSGI entry point.  
+6. Update `settings.py` to set `DEBUG = False`, configure `ALLOWED_HOSTS`, and enable Whitenoise middleware.  
+7. Configure PostgreSQL using `dj-database-url` and environment variables in `settings.py`.  
+8. Configure static files with `STATIC_ROOT` and Whitenoise storage settings.  
+9. Create a `runtime.txt` file specifying the Python version.  
+10. Initialize a Git repository and commit all project files.  
+11. Log in to Heroku using the Heroku CLI from the VS Code terminal.  
+12. Create a new Heroku application using `heroku create`.  
+13. Add a Heroku Postgres database using `heroku addons:create heroku-postgresql:hobby-dev`.  
+14. Set required environment variables on Heroku, including `SECRET_KEY`.  
+15. Deploy the application by pushing the Git repository to Heroku.  
+16. Run database migrations on Heroku using `heroku run python manage.py migrate`.  
+17. Collect static files using `heroku run python manage.py collectstatic --noinput`.  
+18. Optionally create a Django superuser for admin access.  
+19. Open the deployed application using `heroku open`.  
+20. Monitor logs with `heroku logs --tail` to troubleshoot issues.
 
 Once deployed, the application is accessible via the Heroku URL provided.
 
