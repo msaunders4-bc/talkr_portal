@@ -94,11 +94,11 @@ The Talkr Portal is deployed using Heroku. Continuous deployment is enabled thro
 10. Initialize a Git repository and commit all project files.  
 11. Log in to Heroku using the Heroku CLI from the VS Code terminal.  
 12. Create a new Heroku application using `heroku create`.  
-13. Add a Heroku Postgres database using `heroku addons:create heroku-postgresql:hobby-dev`.  
+13. Add a Heroku Postgres database using `heroku addons:create heroku-postgresql`.  
 14. Set required environment variables on Heroku, including `SECRET_KEY`.  
 15. Deploy the application by pushing the Git repository to Heroku.  
 16. Run database migrations on Heroku using `heroku run python manage.py migrate`.  
-17. Collect static files using `heroku run python manage.py collectstatic --noinput`.  
+17. Collect static files using `heroku run python manage.py collectstatic`.  
 18. Optionally create a Django superuser for admin access.  
 19. Open the deployed application using `heroku open`.  
 20. Monitor logs with `heroku logs --tail` to troubleshoot issues.
